@@ -1,0 +1,538 @@
+/*
+Theme: Intellectual Chaos
+Author: Joel P. Smallwood
+Version: 1.0
+*/
+
+/*smallwood reset*/
+/**************************   reset    **************************/
+
+/*  starts with mccleod-reset.  Change as needed  */
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, button, p, blockquote, pre, a, abbr, address,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, sub, sup, b, u, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+figure, figcaption, footer, header, nav, output, section, time, mark, audio, video, input, textarea, select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    /* inherits the browser's font properties: font-size 16px */
+    font: inherit;
+    /*  specifies the vertical alignment of an inline element */
+    vertical-align: baseline;
+
+    box-sizing: border-box;
+
+    /*  specifies the height of line boxes within the element. */
+    line-height: 1;
+
+    border-radius: 0;
+
+    /* no outline around anything */
+    outline: none;
+
+    /* inherit the color value of the parent */
+    color: inherit;
+}
+
+ol, ul {
+    /* no bullets in lists */
+    list-style: none;
+}
+
+a {
+    /* the color of the font for anchor tags is inherited */
+    color: inherit;
+    /* no underline */
+    text-decoration: none;
+}
+
+button {
+    /* turn the cursor into a pointing finger */
+    cursor: pointer;
+    background-color: transparent;
+}
+
+blockquote, q {
+    /* no quotes */
+    quotes: none;
+}
+
+table {
+    /* no spacing between cells*/
+    border-spacing: 0;
+    /*borders are collapsed - adjacent table cells share borders */
+    border-collapse: collapse;
+}
+/***********************  end reset    **************************/
+
+/***********************  mobile first **************************/
+header{
+    /*background-color: #2e4fff;*/
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: whitesmoke;
+    z-index: 5;
+
+}
+
+header a{
+    height: 3.5rem;
+    width: 3.5rem;
+    padding-top: 5px;
+}
+
+header h1{
+    font-size: 1.3rem;
+    font-family: 'Cinzel Decorative', serif;
+    /*background-color: deeppink;*/
+    margin: .5rem;
+    text-align: left;
+    padding-top: 15px;
+
+}
+
+.nav-menu{
+    width: auto;
+    /*display: inline;*/
+}
+
+header ul{
+    background-color: white;
+    z-index: 10;
+}
+
+.nav-menu li{
+    width: 100px;
+    margin: 10px;
+}
+
+.nav-menu li{
+    display: inline-block;
+}
+
+.nav-menu i{
+    padding-bottom: 10px;
+    color: #AAAAAA;
+
+}
+
+#search-box{
+    display: none;
+}
+
+#mobile-search{
+    width: 100%;
+}
+
+#mobile-search input{
+    /*width: 75%;*/
+}
+
+#mobile-search button{
+    position: absolute;
+    right: 10px;
+}
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid #00B4CC;
+    border-right: none;
+    padding: 14px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+
+.searchButton {
+    width: 40px;
+    height: 34px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 30%;
+    position: absolute;
+    top: 20px;
+    left: 630px;
+    transform: translate(-50%, -50%);
+}
+
+.nav-menu input{
+    width: 90%;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#DDDDDD;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.nav-toggle{
+    position: absolute;
+    cursor: pointer;
+    margin: 0 1rem;
+    right: 0;
+    width: auto;
+}
+
+.close-icon{
+    display: none;
+}
+
+.nav-checkbox{
+    display: none;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+    /*margin:2rem;*/
+    font-family: 'Julius Sans One', sans-serif;
+    display: none;
+}
+
+#nav-checkbox:checked ~ ul.nav-menu{
+    display: block;
+}
+
+#nav-checkbox:checked ~ label.nav-toggle .close-icon{
+    display: block;
+}
+
+#nav-checkbox:checked ~ label.nav-toggle .menu-icon{
+    display: none;
+}
+
+.nav-menu a{
+    color: #2e4fff;
+}
+
+.nav-menu a:hover{
+    color: #51b8b8;
+}
+
+/* Above the Fold  Full size image*/
+#home-atf {
+    padding-top: 75px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+    background-color: #5b5b5b;
+    background-image: url("../images/intel-chaos-mobile2.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#home-atf h2{
+    font-size: 18px;
+    font-family: Montserrat, serif;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    margin-top: 200px;
+    margin-left: 320px;
+}
+
+.highlight-image{
+    height: 72%;
+    /*width: auto;*/
+    overflow: hidden;
+}
+
+.highlight-article{
+    height: 180px;
+    width: 200px;
+    background-color: white;
+    opacity: 70%;
+    position: fixed;
+    left: 20px;
+}
+
+.highlight-article-heading{
+    padding-top:2px;
+    padding-left:10px;
+}
+
+.highlight-article-title{
+    background-color: #2e4fff;
+    color: whitesmoke;
+    font-family: Montserrat, serif;
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+
+.highlight-article-tag{
+    /*background-color: #00B4CC;*/
+    /*color: whitesmoke;*/
+    color: whitesmoke;
+    background-color: #100852;
+    font-family: Montserrat, serif;
+    font-size: .8rem;
+    padding-bottom: 2px;
+    position: absolute;
+    top: 110px;
+    width: 50%;
+}
+
+.highlight-article-author{
+    /*background-color: #00B4CC;*/
+    /*color: whitesmoke;*/
+    background-color: whitesmoke;
+    color: #100852;
+    font-family: Montserrat, serif;
+    font-size: .8rem;
+    padding-top: 5px;
+}
+
+.highlight-article-date{
+    /*background-color: #00B4CC;*/
+    /*color: whitesmoke;*/
+    background-color: whitesmoke;
+    color: darkblue;
+    font-family: Montserrat, serif;
+    font-size: .8rem;
+    padding-top: 5px;
+}
+
+#highlight-article-1{
+    top: 10%;
+}
+
+#highlight-article-2{
+    top: 40%;
+}
+
+#highlight-article-3{
+    top: 70%;
+}
+
+#home-main{
+    position: relative;
+    z-index: 1;
+    background-color: whitesmoke;
+    height: 10000px;
+}
+
+.left-articles{
+    /*background-color: hotpink;*/
+    display: none;
+}
+
+.left-article-category{
+    font-family: Montserrat, serif;
+    font-size: 20px;
+    padding: 5px;
+    color: #5b5b5b;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.left-article{
+    font-family: Montserrat, serif;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    color: darkblue;
+}
+
+#main-articles{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    /*background-color: #00B4CC;*/
+}
+
+.main-article{
+    /*background-color: #00B4CC;*/
+
+}
+
+.main-article-left{
+    /*background-color: orange;*/
+    width: 30%;
+    float: left;
+
+}
+
+.main-article-right{
+    /*background-color: chocolate;*/
+    width: 67%;
+    float: right;
+    padding-right: 30px;
+
+}
+
+.main-article-image{
+    width: 100%;
+}
+
+.page-article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    /*background-color: #00B4CC;*/
+}
+
+.page-article-head-image{
+    width: 400px;
+    padding-top: 75px;
+}
+
+.page-article-descr{
+
+}
+
+.main-article-category{
+    color: #51b8b8;
+    background-color: darkblue;
+    font-family: Montserrat, serif;
+    text-align: left;
+    font-size: 1.1rem;
+    /*padding-bottom: 2px;*/
+    padding: 3px;
+    position: relative;
+    top: 20px;
+    /*left: 10px;*/
+    width: auto;
+}
+
+.main-article-title{
+    /*background-color: darkblue;*/
+    background-color: #51b8b8;
+    font-family: Montserrat, serif;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.main-article-author{
+    /*background-color: darkblue;*/
+    font-family: Montserrat, serif;
+    font-size: .9rem;
+    padding: 2px;
+    /*margin-top: 5px;*/
+    background-color: #EEEEEE;
+}
+
+.main-article-description{
+    /*background-color: darkblue;*/
+    padding-top: 5px;
+    font-size: 1.2rem;
+    color: #5b5b5b;
+}
+
+/***********************  end mobile first **********************/
+
+/***********************     tablet    **************************/
+@media only screen and (min-width: 600px){
+    header h1{
+        /*background-color: #51b8b8;*/
+        width: auto;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+    .nav{
+
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #mobile-search{
+        display: none;
+        width: 100%;
+    }
+
+    .nav-menu #search{
+
+    }
+
+    header ul{
+        background-color: transparent;
+    }
+
+    .left-articles{
+        /*background-color: hotpink;*/
+        /*display: ;*/
+        height: 1200px;
+        width: 33%;
+        float: left;
+    }
+
+    #main-articles{
+        width: 50%;
+    }
+
+    .page-article {
+        width: 50%;
+    }
+
+    .left-articles{
+        /*background-color: hotpink;*/
+        display: block;
+    }
+
+}
+
+
+/***********************  end tablet ****************************/
+
+/***********************     desktop    **************************/
+@media only screen and (min-width: 1000px){
+    #search-box{
+        display: block;
+    }
+    #home-atf {
+        background-image: url("../images/intel-chaos.png");
+
+    }
+    #home-atf h2{
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/***********************  end desktop ****************************/
